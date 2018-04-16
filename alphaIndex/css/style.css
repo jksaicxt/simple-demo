@@ -1,0 +1,126 @@
+body {
+    text-align: center;
+}
+
+.alphaIndex {
+    margin: 50px 0 0 0;
+    position: relative;
+    display: inline-block;
+}
+
+input {
+    width: 180px;
+    height: 33px;
+    padding: 0 20px;
+    border: 1px solid #ddd;
+    color: #666;
+    cursor: pointer;
+}
+
+.alphaContainer {
+    width: 222px;
+    border: 1px solid #ddd;
+    padding: 5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    top: 34px;
+    left: 0;
+    background: #fff;
+    z-index: 999;
+    clear: both;
+    display: none;
+}
+
+.letter a {
+    float: left;
+    padding: 5px;
+    color: #666;
+}
+
+.letter a:hover {
+    color: #fff;
+    background: #F04F43;
+}
+
+.alphaContainer .search {
+    width: 100%;
+    padding: 5px 0 10px 0;
+    display: inline-block;
+    border-bottom: 1px dashed #ddd;
+}
+
+.alphaContainer input[type=text] {
+    width: 160px;
+    padding: 5px;
+    display: inline-block;
+    height: 35px;
+    line-height: 35px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+}
+
+.alphaContainer .goSearchBtn {
+    height: 30px;
+    line-height: 30px;
+    padding: 0 12px;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #F04F43;
+    color: #fff;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    float: right;
+    margin: 2px 0 0 0;
+}
+
+.alphaContainer .goSearchBtn:hover {
+    background: #da4439;
+}
+
+.alphaContent {
+    max-height: 210px;
+    overflow-y: scroll;
+}
+
+.alphaContent ul li {
+    width: 100%;
+    display: inline-block;
+    border-bottom: 1px solid #eee;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+.alphaContent ul li:hover {
+    background: #eee;
+}
+
+.alphaContent ul li i {
+    color: #666;
+    margin: 5px 0;
+    float: left;
+    border-right: 1px solid #ddd;
+    padding: 0 5px;
+}
+
+.alphaContent ul li a {
+    margin: 5px;
+    float: left;
+    color: #666;
+}
+
+.alphaContent p {
+    padding: 30px 0;
+    text-align: center;
+    color: #999;
+}
+
+.alphaContent p em {
+    color: #00a0e9;
+}

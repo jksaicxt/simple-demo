@@ -1,0 +1,174 @@
+@charset "utf-8";
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a, strong, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    border: 0 none;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: tahoma, arial, sans-serif;
+}
+
+body, button, input, select, textarea {
+    font: 14px/1.5 tahoma, arial, sans-serif;
+}
+
+a, a:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button, input, select, textarea {
+    font-size: 100%;
+    outline: none;
+}
+
+input::-ms-clear, input::-ms-reveal {
+    display: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+body {
+    line-height: 1
+}
+
+section, article, aside, header, footer, nav, dialog, figure {
+    display: block
+}
+
+figure {
+    margin: 0
+}
+
+* html.cf {
+    height: 1%
+}
+
+.cf {
+    display: block;
+    zoom: 1
+}
+
+.cf:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden
+}
+
+.fl {
+    float: left;
+    display: inline
+}
+
+.fr {
+    float: right;
+    display: inline
+}
+
+.cb {
+    clear: both
+}
+
+.cl {
+    clear: left
+}
+
+.cr {
+    clear: right
+}
+
+.tl {
+    text-align: left
+}
+
+.tr {
+    text-align: right
+}
+
+.tc {
+    text-align: center
+}
+
+.vt {
+    vertical-align: top
+}
+
+.vm {
+    vertical-align: middle
+}
+
+.pr {
+    position: relative
+}
+
+.pa {
+    position: absolute
+}
+
+.fn {
+    font-weight: normal
+}
+
+.fb {
+    font-weight: bold
+}
+
+.zoom {
+    zoom: 1
+}
+
+.vh {
+    visibility: hidden
+}
+
+.dpn {
+    display: none;
+}
+
+.dpb {
+    display: block;
+}
+
+.dpib {
+    display: inline-block;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    border: 0;
+}
+
+.imd {
+    ime-mode: Disabled;
+}
+
+em, i, strong {
+    font-style: normal;
+}
+
+.oh {
+    overflow: hidden;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: #999;
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #999;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #999;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #999;
+}

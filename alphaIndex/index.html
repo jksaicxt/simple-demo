@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>简易版字母滚动索引</title>
+
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/reset.css"/>
+</head>
+
+<body>
+
+<div class="alphaIndex">
+    <input type="text" id="inputBtn" readonly>
+    <div class="alphaContainer">
+        <div class="letter">
+            <a id="idall">全部</a>
+            <a id="ida">A</a>
+            <a id="idb">B</a>
+            <a id="idc">C</a>
+            <a id="idd">D</a>
+            <a id="ide">E</a>
+            <a id="idf">F</a>
+            <a id="idg">G</a>
+            <a id="idh">H</a>
+            <a id="idi">I</a>
+            <a id="idj">J</a>
+            <a id="idk">K</a>
+            <a id="idl">L</a>
+            <a id="idm">M</a>
+            <a id="idn">N</a>
+            <a id="ido">O</a>
+            <a id="idp">P</a>
+            <a id="idq">Q</a>
+            <a id="idr">R</a>
+            <a id="ids">S</a>
+            <a id="idt">T</a>
+            <a id="idu">U</a>
+            <a id="idv">V</a>
+            <a id="idw">W</a>
+            <a id="idx">X</a>
+            <a id="idy">Y</a>
+            <a id="idz">Z</a>
+            <a id="idother">其他</a>
+            <a onclick="$('#inputBtn').val('')">清空</a>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="关键字查找" value="" maxlength="30">
+            <a class="goSearchBtn">Go</a>
+        </div>
+        <div class="alphaContent">
+            <!-- 搜索不到相符内容的情况 -->
+            <!--<p>-->
+            <!--没有符合“<em>其他</em>”条件的品牌-->
+            <!--</p>-->
+            <ul>
+                <li id="tgida"><i>A</i><a>安睡宝</a></li>
+                <li><i>A</i><a>acer</a></li>
+                <li><i>A</i><a>爱仕达</a></li>
+                <li><i>A</i><a>阿玛尼</a></li>
+                <li><i>A</i><a>爱帝</a></li>
+                <li><i>A</i><a>爱卡</a></li>
+                <li><i>A</i><a>安睡宝</a></li>
+                <li id="tgidb"><i>B</i><a>宝宝金水</a></li>
+                <li><i>B</i><a>堡其多</a></li>
+                <li><i>B</i><a>包饰卡</a></li>
+                <li><i>B</i><a>苞蕾</a></li>
+                <li id="tgidc"><i>C</i><a>成金品牌</a></li>
+                <li><i>C</i><a>cerrky</a></li>
+                <li><i>C</i><a>车玛尼</a></li>
+                <li><i>C</i><a>卡拉士</a></li>
+                <li id="tgidd"><i>D</i><a>d成金品牌</a></li>
+                <li><i>D</i><a>dcerrky</a></li>
+                <li><i>D</i><a>d车玛尼</a></li>
+                <li><i>D</i><a>d卡拉士</a></li>
+                <li id="tgide"><i>E</i><a>e安睡宝</a></li>
+                <li><i>E</i><a>eacer</a></li>
+                <li><i>E</i><a>e爱仕达</a></li>
+                <li><i>E</i><a>e阿玛尼</a></li>
+                <li><i>E</i><a>e爱帝</a></li>
+                <li><i>E</i><a>e爱卡</a></li>
+                <li><i>E</i><a>e安睡宝</a></li>
+                <li id="tgidz"><i>Z</i><a>真宝</a></li>
+                <li><i>Z</i><a>z卡拉士</a></li>
+                <li><i>Z</i><a>z包饰卡</a></li>
+                <li><i>Z</i><a>z阿玛尼</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        // 按钮显隐层
+        $('.alphaIndex').on('click', '#inputBtn', function () {
+            $('#inputBtn').focus();
+            $('.alphaContainer').toggle();
+        });
+
+        // 字母索引
+        $('.letter').on('click', 'a', function () {
+            var id = $(this).attr("id");
+            var tgid = 'tg' + id;
+            var tgtop = $("#" + tgid).position().top + $(".alphaContent").scrollTop() - 128;
+            $(".alphaContent").animate({scrollTop: tgtop}, 500);
+        });
+
+        // 选中记录
+        $('.alphaContent').on('click', 'li', function () {
+            $('#inputBtn').val($(this).find('a').text());
+            $('.alphaContainer').hide();
+        });
+    });
+</script>
+
+</body>
+
+</html>
